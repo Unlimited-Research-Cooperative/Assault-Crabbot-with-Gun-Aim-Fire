@@ -1,0 +1,56 @@
+<robot name="CrabBot">
+  <!-- Main body link -->
+  <link name="body">
+    <visual>
+      <geometry>
+        <mesh filename="/home/vincent/MySSD/JupyterProjects/AAA_projects/UnlimitedResearchCooperative/Synthetic_Intelligence_Labs/HASEL-crab-bot/model/body.stl"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- Define parameters for the limbs -->
+  <xacro:property name="limb_length" value="1.0"/> <!-- Length of each limb -->
+  <xacro:property name="joint_spacing" value="0.2"/> <!-- Spacing between limb joints -->
+
+  <!-- Loop to create 4 identical limbs -->
+  <xacro:property name="num_limbs" value="4"/>
+  <xacro:property name="limb_names" value="'limb1', 'limb2', 'limb3', 'limb4'"/> <!-- Names for the limbs -->
+
+  <xacro:foreach item="limb_name" in="${limb_names}">
+    <!-- Create a limb -->
+    <link name="${limb_name}">
+      <!-- Visual representation of the limb -->
+      <visual>
+        <geometry>
+          <mesh filename="/home/vincent/MySSD/JupyterProjects/AAA_projects/UnlimitedResearchCooperative/Synthetic_Intelligence_Labs/HASEL-crab-bot/model/limb1_bone1.stl"/>
+        </geometry>
+      </visual>
+
+      <!-- Create joints for the limb -->
+      <!-- Hip joint for the limb -->
+      <joint name="${limb_name}_hip_joint" type="revolute">
+        <origin xyz="${limb_length} 0 0.05" rpy="0 0 0"/> <!-- Adjust xyz for position -->
+        <parent link="body"/>
+        <child link="${limb_name}_bone1"/>
+        <axis xyz="0 1 0"/> <!-- Adjust axis if necessary -->
+        <limit lower="-1.57" upper="1.57" effort="0" velocity="0"/>
+      </joint>
+
+      <!-- Loop to create 3 knee joints for each limb -->
+      <xacro:property name="num_knee_joints" value="3"/>
+      <xacro:property name="knee_joints" value="'knee_joint1', 'knee_joint2', 'knee_joint3'"/>
+
+      <xacro:foreach item="knee_joint" in="${knee_joints}">
+        <!-- Knee joint -->
+        <joint name="${limb_name}_${knee_joint}" type="revolute">
+          <origin xyz="0 0 -${joint_spacing}" rpy="0 0 0"/> <!-- Adjust xyz for position -->
+          <parent link="${limb_name}_bone${loop.index}"/>
+          <child link="${limb_name}_bone${loop.index + 1}"/>
+          <axis xyz="0 1 0"/> <!-- Adjust axis if necessary -->
+          <limit lower="-1.57" upper="1.57" effort="0" velocity="0"/>
+        </joint>
+      </xacro:foreach>
+    </link>
+  </xacro:foreach>
+</robot>
+
