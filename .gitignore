@@ -4,3 +4,6 @@
 # Ignore the model folder
 /model/
 
+# Ignore the STL and VRML folders
+/stl/
+/vrml/
