@@ -2,6 +2,14 @@
   <img src="images/model.png" alt="Crab Bot">
 </div>
 
+
+
+# WORK IN PROGRESS 
+
+
+
+
+
 # HASEL Actuator Crab Bot
 
 The HASEL Actuator Crab Bot is a versatile and highly mobile robot inspired by the movement of crabs. It utilizes HASEL (Hydraulically Amplified Self-healing Electrostatic) actuators, which are soft and flexible actuators capable of providing both strength and flexibility to the robot's limbs.
@@ -20,7 +28,6 @@ The hardware components for the HASEL Actuator Crab Bot include:
 - **Body Structure**: The 3D-printed or fabricated body structure that houses the actuators and provides stability.
 - **Electronics**: Control boards, sensors, and power systems required for operating the robot.
 
-![Hardware](images/hardware.jpg)
 
 ## Software
 
@@ -30,7 +37,6 @@ The software for the HASEL Actuator Crab Bot includes:
 - **CAD Models**: 3D CAD models of the robot for design and visualization.
 - **Control Code**: Software code to control the robot's movements, including walking, turning, and other locomotion patterns.
 
-![Software](images/software.jpg)
 
 ## Getting Started
 
