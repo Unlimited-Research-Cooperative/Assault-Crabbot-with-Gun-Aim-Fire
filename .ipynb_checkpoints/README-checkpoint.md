@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="images/model.png" alt="Crab Bot">
+  <img src="images/design_v1.png" alt="Assault Crabbot with Auto Aim / Fire">
 </div>
 
 
@@ -10,15 +10,15 @@
 
 
 
-# HASEL Actuator Crab Bot
+# Assault Crabbot with Auto Aim / Fire
 
-The HASEL Actuator Crab Bot is a versatile and highly mobile robot inspired by the movement of crabs. It utilizes HASEL (Hydraulically Amplified Self-healing Electrostatic) actuators, which are soft and flexible actuators capable of providing both strength and flexibility to the robot's limbs.
+The Assault Crabbot with Auto Aim / Fire is a versatile and highly mobile robot inspired by the movement of crabs
 
 ## Features
 
-- **High Mobility**: The HASEL Actuator Crab Bot is designed to mimic the movement of crabs, allowing it to move efficiently on various terrains.
-- **Flexible Design**: The soft and flexible HASEL actuators enable the robot to adapt to its surroundings and perform complex movements.
-- **Open Source**: All design files, code, and documentation are open source, making it easy for you to build your own robot or contribute to the project.
+Auto Aim /Fire
+High speed crawling and climbing
+Remote controlled by human operator
 
 ## Hardware
 
@@ -26,26 +26,16 @@ The hardware components for the HASEL Actuator Crab Bot include:
 
 - **HASEL Actuators**: The soft actuators that provide motion to the limbs of the robot.
 - **Body Structure**: The 3D-printed or fabricated body structure that houses the actuators and provides stability.
-- **Electronics**: Control boards, sensors, and power systems required for operating the robot.
-
+- **Electronics**: Control boards, sensors, and power systems required for operating the robot
 
 ## Software
 
-The software for the HASEL Actuator Crab Bot includes:
-
-- **ROS (Robot Operating System)**: The robot's control system is based on ROS, providing a framework for controlling and simulating the robot's movements.
-- **CAD Models**: 3D CAD models of the robot for design and visualization.
-- **Control Code**: Software code to control the robot's movements, including walking, turning, and other locomotion patterns.
+Software is being worked on currently
 
 
-## Getting Started
+## V1
 
-To get started with the HASEL Actuator Crab Bot, follow these steps:
-
-1. **Clone the Repository**: Clone this GitHub repository to your local machine.
-
-   ```bash
-   git clone https://github.com/yourusername/HASEL-Actuator-Crab-Bot.git
+The first version will use servos instead of HASEL actuators, and will include a auto aim/fire system 
 
 
 <br>
